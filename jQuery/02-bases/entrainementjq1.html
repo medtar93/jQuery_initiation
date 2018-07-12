@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery 1</title>
+		<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="jquery.js"></script>
+		<script src="entrainementjq1.js"></script>
+		<style>
+			h1 {
+				text-align : center;
+				padding : 5px 0;
+				background: #000;
+				color : #fff;
+			}
+			
+			h2 {
+				padding-left : 10px;
+				background : #000;
+				color : #fff;
+			}
+			div {
+				position : relative;
+				width : 100px;
+				height : 100px;
+				border : 1px solid grey;
+			}
+			img { width: 100%; height: 100%; }
+			#galerie { height: 300px;  border: none;}
+			#galerie img { height: 100px; }
+			#violet { background: violet; }
+			.rouge {color: red;}
+			.bleu {background: cyan; width: 300px;}
+			.hide {display: none;}
+			
+		</style>
+	</head>
+	<body style="margin-bottom: 300px;">
+		<h1>jQuery - partie 1</h1>
+		<h2>Cliques sur le carré blanc, tous les h3 vont disparaitre</h2>
+		<div id="carre"></div>
+		
+		<h3>Je suis un h3 n°1</h3>
+		<h3>Je suis un h3 n°2</h3>
+		<h3>Je suis un h3 n°3</h3>
+		
+		<button id="monBouton">Disparition du carré blanc</button>
+		<hr>
+		
+		<h2>Double-cliques sur l'image, le carré blanc va réapparaître</h2>
+		<div><img class="photo" src="imgs/a.jpg"></div>
+		<hr>
+		
+
+		<h2>En cliquant sur l'interrupteur, le texte apparaît et disparaît</h2>		
+		<h3 id="on-off">J'apparais et disparais si tu cliques sur l'interrupteur</h3>
+		<button id="interrupteur">ON / OFF</button>
+		<hr>
+		
+		
+
+		<h2>En cliquant sur les boutons, on affiche la ou les images</h2>	
+		<button id="afficher">Afficher tous les éléments cachés</button>
+		<button id="effacer">Effacer tous les éléments visibles</button>
+		<button id="afficher-premier">Afficher le premier élément caché</button>
+		<div id="galerie">	
+			<img class="hide" src="imgs/a.jpg">
+			<img class="" src="imgs/b.jpg">
+			<img class="hide" src="imgs/c.jpg">
+		
+		</div>	
+				
+		<h2>En entrant sur le vert, le rouge devient jaune, puis en sortant du vert, le bleu devient jaune </h2>
+		<div id="bleu" style="background-color:blue"></div>
+		<div id="vert" style="background-color:green"></div>
+		<div id="rouge" style="background-color:red"></div>
+		<hr>
+		
+		
+		<h2>Lors du focus et du blur, les inputs changent. Un caractère saisi dans mpd1 se répète dans mdp2.</h2>		
+		<form>
+			<p><label>mdp1</label><input id="mdp1" type="text"></p>
+			<p><label>mdp2</label><input id="mdp2" type="text"></p>
+			<button type="submit">valide !</button>
+		</form>
+		<hr>
+
+				
+		<h2>Vérifier la valeur de la propriété CSS position</h2>
+		<div id="violet"></div>
+
+		<h2>Si le alt de l'image est vide, je le complète</h2>
+		<div><img src="imgs/d.jpg" alt="" class="modifAlt"></div>
+
+		<h2>Ajouter du texte ou du contenu HTML</h2>
+		<p class="texte"></p>
+		<p class="texte"></p>
+
+		
+		<h2>En survolant le paragraphe, on lui ajoute une classe "rouge"</h2>		
+		<p id="survol">Ce texte va changer de couleur au survol</p>
+		<button id="classBleu">Ajoute ou retire la classe "bleu"</button>
+
+
+
+		<h2>la méthode each()</h2>
+		<h4>...</h4>
+		<h4>...</h4>
+		<h4>...</h4>
+		<h4>...</h4>
+		
+	</body>
+</html>
+

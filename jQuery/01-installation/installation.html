@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Installer jQuery</title>
+    <!-- jQuery est une bibliothèque JavaScript, ou encore appelé librairie par extension du mot "librarie" en anglais.
+    
+
+    Cette bibliothèque regroupe un ensemble de fonctions qui permettent de faciliter l'utilisation du JavaScript, de faire des animations en quelques lignes (contre des dizaines en JS), ou de simplifier les échanges en AJAX.
+
+    Note : le jquery n'est pas fait pour servir de "rustine" à un code JS mal construit !
+    -->
+
+    <!-- Deux façons d'implementer la bibliothèque jQuery: -->
+    <!-- 1° En phase de développement, vous pourvez télécharger la bibliothèque sur jquery.com, la mettre dans un dossier de votre site, et faire le lien suivant dans une balise <script> :   -->
+        <!-- <script src="jquery.js"></script> -->
+
+    <!-- 2° pour les sites mis en production, il est recommandé de faire un lien vers un CDN = Content Delivery Network. Un CDN est un réseau de serveur dispersé dans plusieurs villes ou pays sur lesquels sont mis à disposition des fichiers tel que jQuery. on préconise cet usage pour les sites en production : rapidité, vérificaation en cache du navigateur si jQuery ne s'y trouve pas déja  -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <p>La bibliothèque ne fonctionne pas.</p>
+    
+    <script>
+        $('p').html('La bibliothèque fonctionne !');
+    </script>
+</body>
+</html>

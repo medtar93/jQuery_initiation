@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Exercices JQuery Partie 1</title>
+		<meta charset="utf-8">
+		<style>
+			.container { width: 60vw; margin: 0 auto; }
+			ul, li { display: inline-block; list-style: none; margin: 0;}
+			li a { color: #000; text-decoration: none; }
+			#onglet1, #contenu1 { background: grey; }
+			#onglet2, #contenu2 { background: brown;}
+			#contenu2 { display: none; }
+			.red { color: red; }
+			nav ul li { display: none; }
+			#portfolio img { width: 200px; height: 150px; }
+			.group { position: relative; overflow: hidden; }
+			.group p { position: absolute; bottom: 5px; left: -200px; color: #fff; background: #222; margin: 0; width: 200px; }
+		</style>
+		<script src="jquery.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	</head>
+
+	<body>				
+		<div class="container">
+		<h3>Exercice 1 : </h3>
+			<p>Lorsqu'on clique sur l'onglet2, le contenu2 apparaît, et quand on clique sur l'onglet1, c'est le contenu1 qui apparaît. </p>
+					<ul>
+						<li><a href="#" id="onglet1">Onglet 1</a></li>
+						<li><a href="#" id="onglet2">Onglet 2</a></li>
+					</ul>
+					<div id="contenu1">Ceci est le contenu 1. Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</div>
+					<div id="contenu2">Ceci est le contenu 2. Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna.</div>
+				
+
+		<hr>
+		
+		<h3>Exercice 2 : </h3>
+			<p>En survolant "menu", le menu déroulant apparaît.</p>
+			<nav style="height: 150px; width: 140px;">
+				<ul> <a href="#">Menu</a>
+					<li><a href="#">Sous menu 1</a></li>
+					<li><a href="#">Sous menu 2</a></li>
+					<li><a href="#">Sous menu 3</a></li>
+				</ul>
+			</nav>
+		<hr>
+
+
+
+		<h3>Exercice 3 : </h3>
+			<p>En appuyant sur "voir" le mot de passe se démasque, puis au relâchement il se masque (jouer sur l'attribut type qui devient "text" puis "password").</p>
+			<form method="post" action="">
+					<label for="mdp">Mot de passe</label>
+					<input id="mdp" type="password" >
+					<span id="voirMdp" style="cursor: pointer">voir</span>
+					<br><br>
+					<input type="submit" class="bouton" id="seConnecter" value="Se connecter">
+			</form>
+		<hr>
+
+		<h3>Exercice 4 : </h3>
+			<p>En cliquant sur un paragraphe, il devient alternativement rouge et noir.</p>
+			<p class="texte">Lorem ipsum</p>
+			<p class="texte">Lorem ipsum</p>
+			<p class="texte">Lorem ipsum</p>
+			<p class="texte">Lorem ipsum</p>
+		<hr>
+
+		<h3>Exercice 5 : </h3>
+			<p>En survolant chaque image, son opacité passe à 0.5 avec une transition de 0.5s, puis l'opacité redevient normale quand on la quitte. </p>
+			<div id="portfolio">
+				<div class="group"><img src="imgs/a.jpg"><p>Lorem ipsum</p></div>
+				<div class="group"><img src="imgs/b.jpg"><p>Lorem ipsum</p></div>
+				<div class="group"><img src="imgs/c.jpg"><p>Lorem ipsum</p></div>
+				<div class="group"><img src="imgs/d.jpg"><p>Lorem ipsum</p></div>
+			</div>
+		</div>		
+
+		<script> 
+		$(function(){
+			//EXERCICE 1:
+			$('#onglet2').click(function(){
+				$('#contenu2').show();
+				$('#contenu1').hide();
+			 });
+			 $('#onglet1').click(function(){
+				$('#contenu1').show();
+				$('#contenu2').hide();
+			 });
+			
+			 //EXERCICE 2:
+			$('nav').hover( //hover appelle toujours 2 function : une entrante et une sortante
+				function(){
+				$('nav li').show();
+				
+			},function(){
+			
+				$('nav li').hide();});
+			
+			// EXERCICE 3:
+			
+			$('#voirMdp').mousedown( 
+				function(){
+					$('#mdp').attr('type', 'text');
+				});
+			$('#voirMdp').mouseup( 
+				function(){
+					$('#mdp').attr('type', 'password');
+				});
+			
+			// EXERCICE 4:
+			
+			$('.texte').click(function(){
+				$(this).toggleClass('red');
+			});
+			
+			//Exercice 5 :
+			++
+
+				$('img').hover(
+				function(){
+					$(this).css({ opacity : '0.2' , transition : '0.5s'});
+				} ,
+				 function(){
+				$(this).css({ opacity : '1' });
+				});
+			
+
+
+		});//  fin du document ready (à ne pas supprimer)
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
