@@ -118,6 +118,10 @@ $(function(){
         $(this).removeClass('rouge'); // Retire .rouge à l'élément
     });
 
+
+
+    
+
     $('#classBleu').click(function(){
         $('#survol').toggleClass('bleu'); //alterne addClass() et removeClass() 
         // pas de $(this) car l'élément sur lequel on agit et différent.

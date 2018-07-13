@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<title>Exercices animations</title>
+	<style type="text/css">
+		.container { width: 1200px; height: 150vh; margin: 0 auto; position: relative;}
+		.fondu { position: relative; height: 350px; }
+		img {width: 300px; position: absolute;}
+		.move {
+				position: relative;
+				width: 100px;
+				height: 100px;
+				background: orange; 
+				line-height: 100px;
+				text-align: center;
+			}
+		.timeline { height: 450px; }	
+		.right { float: right; }
+		.left { clear: both; }
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h3>Exercice 1</h3>
+		<p>En cliquant sur l'image elle disparait en fondu en 1s pour faire apparaître l'image du dessous. En recliquant desssus, elle réapparaît en fondu en 1s pour faire disparaître l'image du dessous.</p>
+		<div class="fondu">
+			<img src="imgs/a.jpg">
+			<img src="imgs/b.jpg">
+		</div>	
+		<hr>
+		
+		<h3>Exercice 2</h3>
+		<p>Quand on scrolle (événement scroll directement appliqué à document), les div se déplacent jusqu'au centre du .container qui fait 1200px de largeur.</p>
+		<div class="timeline">
+			<div>	
+				<div class="move left">Lorem ipsum</div>
+				<div class="move right">Lorem ipsum</div>
+			</div>
+			<div>
+				<div class="move left">Lorem ipsum</div>
+				<div class="move right">Lorem ipsum</div>
+			</div>
+		</div>
+		<hr>
+
+		<h3>Exercice 3</h3>
+		<p>Faites défiler le carré de gauche à droite indéfiniment en 5s avec easing "linear"</p>
+		<button id="anim">Animation</button>
+		<div class="move" id="annonce">Lorem ipsum</div>
+		
+	</div>	
+<script>
+
+$(function(){
+	//Exercice1
+	$('.fondu').click(function(){
+        $('.fondu img').eq(1).fadeToggle(1000); //Alterne le fadeIn() et le fadeOut() en 1s.
+    });
+
+//exercice2
+	function centrer(){
+		$('.left').animate({ left : '550px'  }, 3000);
+		$('.right').animate({ left : '-550px' }, 3000);
+	};
+	$(document).scroll(centrer);
+
+
+
+
+
+
+
+//exercice 3
+
+
+
+
+
+		function bandeau() {
+		$('#annonce').animate({ left : '1200px'  }, { duration : 5000, easing : 'linear' })
+					 .animate({ left : '0px' }, 0, bandeau);
+		}
+		$('#anim').click(bandeau);
+                    
+});// fermeture ready
+</script>
+
+</body>
+</html>

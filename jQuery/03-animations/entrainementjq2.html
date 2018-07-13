@@ -1,0 +1,84 @@
+<!-- recopier le style de entrainementjq1.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery 2</title>
+		<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="jquery.js"></script>
+		<script src="entrainementjq2.js"></script>
+		<style>
+			h1 {
+				text-align : center;
+				padding : 5px 0;
+				background : #000;
+				color : #fff;
+			}
+			h2 {
+				padding-left : 10px;
+				background : #000;
+				color : #fff;
+			}
+			div {
+				position : relative;
+				width : 100px;
+				height : 100px;
+				border : 1px solid grey;
+			}
+			img { width: 100%; height: 100%; }
+		</style>
+	</head>
+	<body>
+		<h1>jQuery - partie 2</h1>
+		
+		<h2>Les animations "FADE"</h2>
+		<button id="fadein">Fade apparition</button>
+		<div id="rouge" style="display:none; background-color : red;"></div>
+		<div id="bleu" style="display:none; background-color : blue;"></div>
+		<div id="vert" style="display:none; background-color : green;"></div>
+		<hr>
+		 
+		<button id="fadeout">Fade disparition</button>
+		<div><img id="imageDisp" src="imgs/a.jpg"></div>
+		<hr>
+		 
+		<button id="interr">Interrupteur</button>
+		<div id="black" style="background-color : black;"></div>
+		<hr>
+		 
+		<button id="exo1">fadeTo - changement d'opacité</button>
+		<div id="orange" style="background-color : orange;"></div>
+		<div id="violet" style="background-color : purple;"></div>
+		 	
+		
+		<h2>Les animations "SLIDE"</h2>
+		
+		<div id="barre" style="cursor:pointer; background-color:blue; width:100%; height:50px;"></div>
+		<div id="rideau" style="background-color : red; width:100%; height:200px; display:none;"></div>
+		<hr>
+		
+		
+		<h2>Les animations "ANIMATE"</h2>
+		<button id="anim1">Animation 1</button>
+		<div id="un" style="background-color : olive;"></div>
+		<hr>
+		<button id="anim2">Animation 2</button>
+		<div id="deux" style="background-color : peru;"></div>
+		<hr>
+		<button id="anim3">Animation 3</button>
+		<div id="trois" style="background-color : pink;"></div>
+		<hr>
+		<button id="anim4">Animation 4</button>
+		<div id="quatre" style="background-color : brown;">Texte</div>
+		<hr>
+		
+		<!-- EXERCICE -->
+		<button id="anim5">Animation 5</button>
+		
+		<div style="height: 2000px; width:100%">
+			<div id="cinq" style="background:pink; "></div>
+		</div>
+		
+	</body>
+</html>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery 3</title>
+		<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="jquery.js"></script>
+		<script src="entrainementjq3.js"></script>
+		<style>
+			body { margin-bottom: 500px; }
+			h1 {
+				text-align : center;
+				padding : 5px 0;
+				background: #000;
+				color : #fff;
+			}
+			h2 {
+				padding-left : 10px;
+				background : #000;
+				color : #fff;
+			}
+			img { width: 200px; height: 150px; }
+			#galeries p, .galerie, h3 { cursor: pointer; } 
+			.galerie { width: 800px; height: 150px; border: 2px solid grey; }
+			.galerie img { float: left; }
+			#accordion h3 { border: 1px solid grey; background: #ccc; cursor: pointer; }
+			#accordion .off { transition: height 1s; height: 0; overflow: hidden; }
+			#accordion .on { transition: height 1s; height: 80px; overflow: hidden;}
+			.carre { width: 100px; height: 100px; background: olive; position: relative; }
+			.scrolls { height: 650px; }
+			.scroll { display: none; }
+			.carre2 { font-size: 30px; text-align: center; line-height: 100px; }
+		</style>
+	</head>
+	<body>
+		<h1>jQuery - partie 3</h1>
+		<h2>Naviguer dans le DOM</h2>
+		
+		<button>Effacer toutes les galeries</button>
+
+		<div id="galeries">
+			<h3>Effacer galerie 1</h3>
+			<div class="galerie">
+				<img src="imgs/a.jpg">
+				<img src="imgs/b.jpg">
+				<img src="imgs/c.jpg">
+				<img src="imgs/d.jpg">
+			</div>
+			<p>Désélectionner la galerie</p>
+			  
+			<h3>Effacer galerie 2</h3>
+			<div class="galerie">
+				<img src="imgs/d.jpg">
+				<img src="imgs/a.jpg">
+				<img src="imgs/b.jpg">
+				<img src="imgs/c.jpg">
+			</div>
+			<p>Désélectionner la galerie</p>
+
+			<h3>Effacer galerie 3</h3>
+			<div class="galerie">
+				<img src="imgs/c.jpg">
+				<img src="imgs/d.jpg">
+				<img src="imgs/b.jpg">
+				<img src="imgs/a.jpg">
+			</div>
+			<p>Désélectionner la galerie</p>
+		</div>
+
+		<h2 id="exo1">Exercice "accordéon" </h2>
+				<p>Vous rendez fonctionnel cet accordéon : au clic sur "section 1" ou "section 2" ou "section 3" le div correspondant s'ouvre, alors que le précédent se referme. Utilisez la classe "on" pour ouvrir l'élément, et la classe "off" pour le fermer. </p>
+				<div id="accordion">
+					  <h3>Section 1</h3>
+					  <div class="on">
+					    <p>
+					    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+					    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+					    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+					    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+					    </p>
+					  </div>
+					  <h3>Section 2</h3>
+					  <div class="off">
+					    <p>
+					    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+					    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+					    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+					    suscipit faucibus urna.
+					    </p>
+					  </div>
+					  <h3>Section 3</h3>
+					  <div class="off">
+					    <p>
+					    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+					    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+					    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+					    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+					    </p>
+					  </div>
+				</div>
+
+
+
+		<h2>Déclencher une action au scroll</h2>
+		<div class="scrolls">
+			<div><img src="imgs/a.jpg" class="scroll"></div>
+			<div><img src="imgs/b.jpg" class="scroll"></div>
+			<div><img src="imgs/c.jpg" class="scroll"></div>
+			<div><img src="imgs/d.jpg" class="scroll"></div>
+		</div>
+
+
+		<h2>Scroll automatique au clic sur un élément</h2>
+		<button class="top">Top</button>
+
+
+		<h2>Exercice "scroll vers exercice 1"</h2>
+		<button class="top2">Aller à exercice 1</button>
+
+
+		<h2>Files d'attente jQuery</h2>
+		<div class="carre carre1"></div>
+
+
+		<h2>Exercice "animation"</h2>
+		<div class="carre carre2">0</div>
+		<button class="stop1">Stop animation</button>
+
+
+		<h2> Ecouter un événement</h2>
+		<form><input type="text"></form>
+		<br>
+		<button class="stop2">Stop animation une fois</button>
+		
+	</body>
+</html>
+
